@@ -1,0 +1,13 @@
+/* 
+  Localization.strings
+  Leavingstone-weather-app
+
+  Created by Giga Khizanishvili on 05.09.21.
+  
+*/
+
+/* Error Messages */
+"error_message_default_error" = "Error occured while loading data";
+"error_message_no_location_authorized" = "Application needs permission to use your location. To show weather, please go to settings and allow application use your location.";
+"error_message_no_internet" = "You  don't have internet connection. Please try using mobile intenet or WiFi and then refresh that page";
+"error_message_no_information_loaded" = "Information was not allowed to load into the page. Please refresh page or try again later.";

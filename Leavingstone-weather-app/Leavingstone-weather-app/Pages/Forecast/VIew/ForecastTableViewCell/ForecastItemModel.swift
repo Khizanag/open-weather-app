@@ -50,6 +50,6 @@ struct ForecastItemModel {
     }
 
     var temperature: String {
-        return "\(TemperatureManager.kelvinToCelsius(Double(_temperature)))ºC"
+        return "\(Int(TemperatureManager.kelvinToCelsius(Double(_temperature))))ºC"
     }
 }

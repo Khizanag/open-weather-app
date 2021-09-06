@@ -191,7 +191,6 @@
 				FB54B0C726E1CAD700BA343C /* VIew */,
 				FB54B0A826DEB2E900BA343C /* ForecastViewController.swift */,
 				FB6372D326E51EFD00B462F3 /* ForecastModel.swift */,
-				FB54B0BC26DEBBB500BA343C /* ForecastItemModel.swift */,
 			);
 			path = Forecast;
 			sourceTree = "<group>";
@@ -365,6 +364,7 @@
 		FB54B0CD26E1CB2C00BA343C /* ForecastTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				FB54B0BC26DEBBB500BA343C /* ForecastItemModel.swift */,
 				FB54B0CE26E1CB3900BA343C /* ForecastTableViewCell.swift */,
 				FB54B0CF26E1CB3900BA343C /* ForecastTableViewCell.xib */,
 			);

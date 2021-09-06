@@ -42,7 +42,7 @@ extension Service {
         // MARK: - Forecast
         
         static func convert(from serviceModel: ForecastServiceModel) -> ForecastViewController.Model {
-            var model = ForecastViewController.Model()
+            var model = ForecastViewController.Model(city: serviceModel.city.name, countryCode: serviceModel.city.country)
             for forecastItem in serviceModel.list {
                 let itemModel = Self.convert(from: forecastItem)
                 if model.sectionModels.isEmpty || itemModel.hour == "00:00" { // new day

@@ -33,9 +33,7 @@ class RootTabBarController: UITabBarController {
 extension RootTabBarController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("*** locationManager.didUpdateLocations")
         guard let location = locations.first else { return }
-        
         UserDefaultsManager.saveCurrentLocation(LocationFactory.convert(from: location))
     }
     

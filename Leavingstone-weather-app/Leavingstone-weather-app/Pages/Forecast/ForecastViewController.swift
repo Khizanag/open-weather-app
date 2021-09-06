@@ -27,6 +27,7 @@ class ForecastViewController: UIViewController {
     // MARK: - Setup
     
     private func setup() {
+        navigationItem.title = "Forecast"
         setupTableView()
         setupErrorView()
         setupLoader()
@@ -82,6 +83,7 @@ class ForecastViewController: UIViewController {
     
     private func refreshSuccessed(with model: Model) {
         self.model = model
+        navigationItem.title = model.locationDescription
         tableView.reloadData()
         loader.stopLoading()
     }

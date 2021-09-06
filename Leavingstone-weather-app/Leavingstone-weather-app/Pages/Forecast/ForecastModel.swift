@@ -10,9 +10,11 @@ import Foundation
 extension ForecastViewController {
     struct Model {
         var sectionModels: [ForecastSectionModel]
+        var locationDescription: String
         
-        init(sectionModels: [ForecastSectionModel] = [ForecastSectionModel]()) {
+        init(sectionModels: [ForecastSectionModel] = [ForecastSectionModel](), city: String = "", countryCode: String = "") {
             self.sectionModels = sectionModels
+            self.locationDescription = "\(city), \(countryCode)"
         }
     }
 }

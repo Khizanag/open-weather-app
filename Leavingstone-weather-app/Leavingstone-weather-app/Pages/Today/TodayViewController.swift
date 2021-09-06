@@ -27,6 +27,7 @@ class TodayViewController: UIViewController {
     @IBOutlet weak var windDirectionItem: TodayDetailItemView!
     
     // MARK: - Properties
+    private var model: Model? = nil
     private let service = Service()
     private let errorView = ErrorView()
     private let loader = LoaderComponentView()
@@ -42,6 +43,7 @@ class TodayViewController: UIViewController {
     // MARK: - Setup
     
     private func setup() {
+        navigationItem.title = " Today "
         setupErrorView()
         setupLoader()
     }
@@ -61,7 +63,6 @@ class TodayViewController: UIViewController {
     }
     
     private func refresh() {
-        print("*** Today.refresh")
         errorView.hide()
         loader.startLoading()
         
@@ -94,6 +95,8 @@ class TodayViewController: UIViewController {
     // MARK: - Configure
     
     public func configure(with model: Model) {
+        self.model = model
+        
         configureIcon(with: model.iconName)
         configureLocationDescription(with: model.locationDescription)
         configureWeatherDescription(with: model.description)
@@ -122,6 +125,18 @@ class TodayViewController: UIViewController {
         windSpeedItem.configure(with: .init(icon: details.windSpeed.icon, description: details.windSpeed.description))
         windDirectionItem.configure(with: .init(icon: details.windDirection.icon, description: details.windDirection.description))
     }
+    
+    @IBAction func sharePressed(_ sender: Any) {
+        guard let model = model else { return }
+        guard let details = model.details else { return }
+        
+        let descriptionText = "Location: \(model.locationDescription),\nTemperature: \(model.temperature)\nWeather: \(model.description)\nCloud: \(details.cloud.description)\nHumidity: \(details.humidity.description)"
+        
+        let activityVC = UIActivityViewController(activityItems: [descriptionText], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
 }
 
 extension TodayViewController: ErrorViewDelegate {

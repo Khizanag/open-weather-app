@@ -5,7 +5,7 @@
 //  Created by Giga Khizanishvili on 05.09.21.
 //
 
-import Foundation
+import UIKit
 
 extension Service {
     class Converter {
@@ -27,9 +27,9 @@ extension Service {
             )
             
             let details = TodayViewController.Details(
-                humidity: .init(icon: R.image.raining()!, description: model.humidity),
-                cloud: .init(icon: R.image.drop()!, description: model.cloudiness),
-                pressure: .init(icon: R.image.pressure()!, description: model.pressure),
+                humidity: .init(icon: UIImage(systemName: "cloud.drizzle.fill")!, description: model.humidity),
+                cloud: .init(icon: UIImage(systemName: "drop.fill")!, description: model.cloudiness),
+                pressure: .init(icon: UIImage(systemName: "barometer")!, description: model.pressure),
                 windSpeed: .init(icon: R.image.wind()!, description: model.windSpeed),
                 windDirection: .init(icon: R.image.compass()!, description: model.windDirection)
             )

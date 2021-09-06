@@ -71,15 +71,24 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FPl-FB-ulo">
                                                 <rect key="frame" x="0.0" y="90" width="414" height="89.5"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTt-gQ-MD2" customClass="TodayDetailItemView" customModule="Leavingstone_weather_app" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="103.5" height="89.5"/>
+                                                    </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-YG-c30" customClass="TodayDetailItemView" customModule="Leavingstone_weather_app" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="207" height="89.5"/>
+                                                        <rect key="frame" x="103.5" y="0.0" width="103.5" height="89.5"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Szk-ht-R3I" customClass="TodayDetailItemView" customModule="Leavingstone_weather_app" customModuleProvider="target">
-                                                        <rect key="frame" x="207" y="0.0" width="207" height="89.5"/>
+                                                        <rect key="frame" x="207" y="0.0" width="103.5" height="89.5"/>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRn-cS-cxg" customClass="TodayDetailItemView" customModule="Leavingstone_weather_app" customModuleProvider="target">
+                                                        <rect key="frame" x="310.5" y="0.0" width="103.5" height="89.5"/>
                                                     </view>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="FPl-FB-ulo" firstAttribute="width" secondItem="5h1-W3-Zl9" secondAttribute="width" id="Mcp-6b-Dex"/>
+                                        </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTp-to-FdR">
                                         <rect key="frame" x="185.5" y="440" width="43" height="30"/>
@@ -97,13 +106,13 @@
                                     <constraint firstItem="sjb-cl-pZL" firstAttribute="top" secondItem="4JN-YO-OYA" secondAttribute="bottom" constant="8" id="DSr-E1-pIN"/>
                                     <constraint firstItem="XTp-to-FdR" firstAttribute="centerX" secondItem="zWw-jn-Is4" secondAttribute="centerX" id="GfS-v5-4C2"/>
                                     <constraint firstItem="XTp-to-FdR" firstAttribute="top" secondItem="sjb-cl-pZL" secondAttribute="bottom" constant="32" id="Mfz-qM-zRm"/>
-                                    <constraint firstAttribute="trailing" secondItem="4JN-YO-OYA" secondAttribute="trailing" id="Nyp-eY-63D"/>
+                                    <constraint firstItem="4JN-YO-OYA" firstAttribute="leading" secondItem="zWw-jn-Is4" secondAttribute="leading" id="Ny1-qz-5lZ"/>
                                     <constraint firstItem="sjb-cl-pZL" firstAttribute="centerX" secondItem="zWw-jn-Is4" secondAttribute="centerX" id="Q7F-0y-HNl"/>
                                     <constraint firstItem="aDF-qx-y69" firstAttribute="top" secondItem="zWw-jn-Is4" secondAttribute="top" id="S0T-pl-aDF"/>
                                     <constraint firstItem="9ur-mq-rVA" firstAttribute="centerX" secondItem="zWw-jn-Is4" secondAttribute="centerX" id="VV5-GS-nOU"/>
                                     <constraint firstItem="9ur-mq-rVA" firstAttribute="top" secondItem="aDF-qx-y69" secondAttribute="bottom" constant="32" id="ZvC-F8-HSM"/>
+                                    <constraint firstAttribute="trailing" secondItem="4JN-YO-OYA" secondAttribute="trailing" id="a61-iL-bTo"/>
                                     <constraint firstItem="4JN-YO-OYA" firstAttribute="top" secondItem="9dP-wW-Wjd" secondAttribute="bottom" constant="16" id="hY6-8k-hHn"/>
-                                    <constraint firstItem="4JN-YO-OYA" firstAttribute="leading" secondItem="zWw-jn-Is4" secondAttribute="leading" id="kO2-E7-R9e"/>
                                     <constraint firstItem="xBL-96-0Pd" firstAttribute="centerX" secondItem="zWw-jn-Is4" secondAttribute="centerX" id="kqd-fY-hBl"/>
                                     <constraint firstItem="aDF-qx-y69" firstAttribute="centerX" secondItem="zWw-jn-Is4" secondAttribute="centerX" id="lv0-e8-tQb"/>
                                     <constraint firstItem="9dP-wW-Wjd" firstAttribute="top" secondItem="xBL-96-0Pd" secondAttribute="bottom" constant="16" id="zbx-4e-CbQ"/>

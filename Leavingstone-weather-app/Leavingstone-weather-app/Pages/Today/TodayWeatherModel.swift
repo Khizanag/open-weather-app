@@ -86,7 +86,7 @@ extension TodayViewController {
 
         public var cloudiness: String { _cloudiness == 0 ? "-" : "\(_cloudiness)" }
 
-        public var humidity: String { "\(_humidity) mm" }
+        public var humidity: String { "\(_humidity)%" }
 
         public var windSpeed: String { "\(_windSpeed) km/h" }
 

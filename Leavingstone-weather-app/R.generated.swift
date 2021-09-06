@@ -687,7 +687,7 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "data_load_error", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'data_load_error' is used in nib 'ErrorView', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
-          if UIKit.UIColor(named: "blue-gradient-start", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'blue-gradient-start' is used in nib 'ErrorView', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "background-color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'background-color' is used in nib 'ErrorView', but couldn't be loaded.") }
           if UIKit.UIColor(named: "primary-color", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'primary-color' is used in nib 'ErrorView', but couldn't be loaded.") }
         }
       }

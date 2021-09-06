@@ -11,7 +11,6 @@ import UIKit
 class RootTabBarController: UITabBarController {
     
     // MARK: - Properties
-    
     private let locationManager = CLLocationManager()
     
     // MARK: - Lifecycle methods
@@ -23,6 +22,8 @@ class RootTabBarController: UITabBarController {
     
     private func setupLocationManager() {
         locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter = kCLDistanceFilterNone
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
@@ -38,7 +39,4 @@ extension RootTabBarController: CLLocationManagerDelegate {
         UserDefaultsManager.saveCurrentLocation(LocationFactory.convert(from: location))
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("*** locationManager.didFailWithError \(error)")
-    }
 }
